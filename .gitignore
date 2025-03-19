@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+env/
+venv/
+*.venv
+*.env
+
+# Django secret key & environment variables
+.env
+*.env.local
+*.env.production
+*.env.sample
+
+# Database
+db.sqlite3
+*.sqlite3
+*.db
+
+# Migrations
+*/migrations/
+!*/migrations/__init__.py
+
+# Media / Uploaded Files
+/media/
+uploads/
+
+# Static files (auto-generated)
+staticfiles/
+static/
+
+# Logs
+logs/
+*.log
+*.out
+*.err
+*.pid
+*.seed
+*.bak
+
+# IDE / Editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+
+# Cache
+*.cache
+__pycache__/
+*.pyc
+.DS_Store

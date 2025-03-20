@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.contrib import messages
 from .forms import ContactForm
 
 
@@ -8,10 +9,13 @@ def home_view(request):
 
 def contact_view(request):
     if request.method == 'POST':
-        form = ContactForm(request.POST, request.FILES) 
+        form = ContactForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
+            messages.success(request, "Form submitted successfully!")  
             return redirect('success')  
+        else:
+            messages.error(request, "This file type is not supported.") 
     else:
         form = ContactForm()
 
